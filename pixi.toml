@@ -1,0 +1,48 @@
+[workspace]
+name = "Aquatones-ALETHEIA"
+authors = ["yukishige.kawaguchi"]
+channels = ["https://conda.modular.com/max", "conda-forge", "nvidia"]
+platforms = ["linux-64"]
+
+[dependencies]
+# 論理層: SciLean のビルドに必要な行列計算ライブラリ
+openblas = ">=0.3.20"
+libgomp = "*"
+modular = ">=25.1"
+python = "3.10.*"
+numpy = ">=1.26"
+gcc_linux-64 = "11.*"
+gxx_linux-64 = "11.*"
+matplotlib = ">=3.10.8,<4"
+h5py = ">=3.15.1,<4"
+
+# 計算層: CUDA C++ (H100 / Hopperアーキテクチャ)
+cuda-toolkit = ">=12.0"
+cuda-nvcc = ">=12.0"
+cuda-version = "12.9.*"
+
+# 開発・ビルドツール
+make = "*"
+cmake = "*"
+gcc = ">=11"
+git = "*"
+libblas = ">=3.9.0"
+liblapack = ">=3.9.0"
+liblapacke = ">=3.9.0"  # これが cblas.h などのヘッダーを提供します
+
+
+[system-requirements]
+cuda = "12.9"
+
+[tasks]
+# CUDAビルド
+build-cuda = "nvcc -Xcompiler -fPIC -shared -arch=sm_90 cuda/src/kernel.cu -o mojo/libvoxel_cuda.so"
+
+# SciLean 本体のビルド (BLASのパスを明示的に注入)
+build-scilean = { cmd = "lake build", cwd = "SciLean", env = { C_INCLUDE_PATH = "$PIXI_PROJECT_ROOT/.pixi/envs/default/include", LIBRARY_PATH = "$PIXI_PROJECT_ROOT/.pixi/envs/default/lib", LDFLAGS = "-L$PIXI_PROJECT_ROOT/.pixi/envs/default/lib", CFLAGS = "-I$PIXI_PROJECT_ROOT/.pixi/envs/default/include" } }
+
+# 監査エンジンのビルド
+build-lean = { cmd = "lake build PhysicsOracle:shared", cwd = "physics_engine", env = { C_INCLUDE_PATH = "$PIXI_PROJECT_ROOT/.pixi/envs/default/include", LIBRARY_PATH = "$PIXI_PROJECT_ROOT/.pixi/envs/default/lib", LD_LIBRARY_PATH = "$HOME/.elan/toolchains/leanprover--lean4---v4.20.1/lib/lean:$PIXI_PROJECT_ROOT/.pixi/envs/default/lib" } }
+
+# 全体の実行
+run = "pixi run build-cuda && pixi run build-scilean && pixi run build-lean && mojo mojo/main.mojo"

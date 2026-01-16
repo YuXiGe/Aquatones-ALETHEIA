@@ -1,0 +1,6 @@
+name = "PhysicsOracle"
+version = "0.1.0"
+defaultTargets = ["PhysicsOracle"]
+
+[[lean_lib]]
+name = "PhysicsOracle"

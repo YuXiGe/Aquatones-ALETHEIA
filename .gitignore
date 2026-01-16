@@ -1,0 +1,40 @@
+cat <<EOF > .gitignore
+# --- Environments ---
+# Pixi environment (large binary files)
+.pixi/
+.env
+
+# --- Lean 4 (Physics Oracle) ---
+# Lake build artifacts
+.lake/
+lake-packages/
+
+# Lean intermediate files (if any leak outside build dir)
+*.olean
+*.ilean
+*.c
+*.o
+
+# --- Mojo & Python ---
+# Mojo cache (if generated)
+__mojo__/
+__pycache__/
+*.pyc
+
+# --- Binaries & Shared Libraries ---
+# Generated shared objects (we build these from source)
+*.so
+*.dylib
+*.dll
+
+# Executables (if compiled)
+audit_engine
+a.out
+
+# --- OS & Editor ---
+.DS_Store
+.vscode/
+.idea/
+*~
+*.swp
+EOF
