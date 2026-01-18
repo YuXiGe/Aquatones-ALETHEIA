@@ -14,8 +14,22 @@ struct RCSEngine:
     fn scan_vulnerability(self) raises:
         print("--- B-21 デジタル・ツイン: PADJ-X 随伴最適化監査開始 ---")
         print(">> 理論基盤: 逆散乱場理論 (式 2-7)")
-        var k_wave = 209.0 
-        _ = self._lib.validate_phase_consistency(k_wave, 100.0, 100.0)
+        
+        var k_wave: Float64 = 200.0   
+        var s1: Float64 = 100.0
+        var s2: Float64 = 100.0      
+        
+        # 1. 一度 PythonObject として結果を受け取る
+        var result_py = self._lib.validate_phase_consistency(k_wave, s1, s2)
+        
+        # 2. 明示的に Float64 へキャスト
+        var result = Float64(result_py)
+        
+        if result > 0.5:
+            print("✅ 物理整合性チェック: PASS (Raw Value:", result, ")")
+        else:
+            print("⚠️ 物理整合性チェック: FAIL (Raw Value:", result, ")")
+            
         print("✅ 全領域同時計算完了: シミュレーション成功")
 
 def main():

@@ -8,6 +8,7 @@ cat <<EOF > .gitignore
 # Lake build artifacts
 .lake/
 lake-packages/
+SciLean
 
 # Lean intermediate files (if any leak outside build dir)
 *.olean

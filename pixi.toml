@@ -26,10 +26,11 @@ make = "*"
 cmake = "*"
 gcc = ">=11"
 git = "*"
-libblas = ">=3.9.0"
+libblas = ">=3.11.0,<4"
 liblapack = ">=3.9.0"
 liblapacke = ">=3.9.0"  # これが cblas.h などのヘッダーを提供します
 clang = ">=21.1.8,<22"
+libcblas = ">=3.11.0,<4"
 
 
 [system-requirements]
