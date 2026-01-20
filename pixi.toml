@@ -26,25 +26,34 @@ make = "*"
 cmake = "*"
 gcc = ">=11"
 git = "*"
+wget = "*"  # LeanDojo のリポジトリ取得に必須
 libblas = ">=3.11.0,<4"
 liblapack = ">=3.9.0"
-liblapacke = ">=3.9.0"  # これが cblas.h などのヘッダーを提供します
+liblapacke = ">=3.9.0"
 clang = ">=21.1.8,<22"
 libcblas = ">=3.11.0,<4"
 
+[pypi-dependencies]
+lean-dojo = "*"  # Mojo から Python 経由で論理検証するために追加
 
 [system-requirements]
 cuda = "12.9"
 
 [tasks]
-# CUDAビルド
+# 1. CUDAカーネルのビルド
 build-cuda = "nvcc -Xcompiler -fPIC -shared -arch=sm_90 cuda/src/kernel.cu -o mojo/libvoxel_cuda.so"
 
-# SciLean 本体のビルド (BLASのパスを明示的に注入)
-build-scilean = { cmd = "lake build", cwd = "SciLean", env = { C_INCLUDE_PATH = "$PIXI_PROJECT_ROOT/.pixi/envs/default/include", LIBRARY_PATH = "$PIXI_PROJECT_ROOT/.pixi/envs/default/lib", LDFLAGS = "-L$PIXI_PROJECT_ROOT/.pixi/envs/default/lib", CFLAGS = "-I$PIXI_PROJECT_ROOT/.pixi/envs/default/include" } }
+# 2. SciLean 本体のビルド
+build-scilean = { cmd = "lake build", cwd = "SciLean", env = { C_INCLUDE_PATH = "$PIXI_PROJECT_ROOT/.pixi/envs/default/include", LIBRARY_PATH = "$PIXI_PROJECT_ROOT/.pixi/envs/default/lib" } }
 
-# 監査エンジンのビルド
-build-lean = { cmd = "lake build PhysicsOracle:shared", cwd = "physics_engine", env = { C_INCLUDE_PATH = "$PIXI_PROJECT_ROOT/.pixi/envs/default/include", LIBRARY_PATH = "$PIXI_PROJECT_ROOT/.pixi/envs/default/lib", LD_LIBRARY_PATH = "$HOME/.elan/toolchains/leanprover--lean4---v4.20.1/lib/lean:$PIXI_PROJECT_ROOT/.pixi/envs/default/lib" } }
+# 3. Lean 監査エンジンのビルド (オブジェクトファイルを生成)
+build-lean = { cmd = "lake build PhysicsOracle", env = { C_INCLUDE_PATH = "$PIXI_PROJECT_ROOT/.pixi/envs/default/include", LIBRARY_PATH = "$PIXI_PROJECT_ROOT/.pixi/envs/default/lib" } }
 
-# 全体の実行
-run = "pixi run build-cuda && pixi run build-scilean && pixi run build-lean && mojo mojo/main.mojo"
+# 4. C++ ブリッジのビルド (CMake を使用)
+build-bridge = { cmd = "mkdir -p build && cd build && cmake .. && make", env = { LD_LIBRARY_PATH = "$HOME/.elan/toolchains/leanprover--lean4---v4.20.1/lib/lean:$PIXI_PROJECT_ROOT/.pixi/envs/default/lib" } }
+
+# 5. 全体の実行フロー (CUDA -> SciLean -> Lean -> C++ Bridge -> Mojo)
+run = "pixi run build-cuda && pixi run build-scilean && pixi run build-lean && pixi run build-bridge && mojo mojo/main.mojo"
+
+# LeanDojo 用の環境変数確認タスク
+check-dojo = "python -c 'import lean_dojo; print(\"LeanDojo version:\", lean_dojo.__version__)'"
