@@ -1,0 +1,1 @@
+-I"/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/include" -I"/home/yukishige.kawaguchi/.elan/toolchains/leanprover--lean4---v4.20.1/include" -isystem "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/targets/x86_64-linux/include"

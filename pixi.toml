@@ -46,8 +46,8 @@ build-cuda = "nvcc -Xcompiler -fPIC -shared -arch=sm_90 cuda/src/kernel.cu -o mo
 # 2. SciLean 本体のビルド
 build-scilean = { cmd = "lake build", cwd = "SciLean", env = { C_INCLUDE_PATH = "$PIXI_PROJECT_ROOT/.pixi/envs/default/include", LIBRARY_PATH = "$PIXI_PROJECT_ROOT/.pixi/envs/default/lib" } }
 
-# 3. Lean 監査エンジンのビルド (オブジェクトファイルを生成)
-build-lean = { cmd = "lake build PhysicsOracle", env = { C_INCLUDE_PATH = "$PIXI_PROJECT_ROOT/.pixi/envs/default/include", LIBRARY_PATH = "$PIXI_PROJECT_ROOT/.pixi/envs/default/lib" } }
+# 監査エンジンのビルド
+build-lean = { cmd = "lake build PhysicsOracle", env = { C_INCLUDE_PATH = "$PIXI_PROJECT_ROOT/.pixi/envs/default/include", LIBRARY_PATH = "$PIXI_PROJECT_ROOT/.pixi/envs/default/lib", LD_LIBRARY_PATH = "$PIXI_PROJECT_ROOT/.pixi/envs/default/lib:$LD_LIBRARY_PATH" } }
 
 # 4. C++ ブリッジのビルド (CMake を使用)
 build-bridge = { cmd = "mkdir -p build && cd build && cmake .. && make", env = { LD_LIBRARY_PATH = "$HOME/.elan/toolchains/leanprover--lean4---v4.20.1/lib/lean:$PIXI_PROJECT_ROOT/.pixi/envs/default/lib" } }
