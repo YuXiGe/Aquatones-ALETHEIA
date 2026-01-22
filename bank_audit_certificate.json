@@ -1,0 +1,17 @@
+{
+  "certificate_id": "6fb91204-4a3e-4a99-8c09-79c16ff10327",
+  "issue_date": "2026-01-22T19:01:02.638527",
+  "location": "Nagasaki Stadium City / Marine Unit 01",
+  "asset_data": {
+    "species": "Mackerel (Saba)",
+    "count": 9200.0,
+    "total_weight_kg": 1932.0,
+    "estimated_value_jpy": 2318400.0
+  },
+  "audit_verification": {
+    "engine": "SciLean (Lean 4 Formal Verification)",
+    "logic_version": "v1.0.0-integer-safe",
+    "result_code": 1,
+    "status": "APPROVED"
+  }
+}
