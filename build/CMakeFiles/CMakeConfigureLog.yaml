@@ -13764,3 +13764,633 @@ events:
       CMAKE_SYSTEM_LIBRARY_PATH:
         - "/usr/lib/X11"
 ...
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - ".pixi/envs/default/share/cmake-4.2/Modules/FindCUDAToolkit.cmake:1088 (find_path)"
+      - "CMakeLists.txt:8 (find_package)"
+    mode: "path"
+    variable: "CUDAToolkit_CUBLAS_INCLUDE_DIR"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "cublas_v2.h"
+    candidate_directories:
+      - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/targets/x86_64-linux/include/"
+    found: "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/targets/x86_64-linux/include/"
+    search_context:
+      ENV{CMAKE_PREFIX_PATH}:
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default"
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/x86_64-conda-linux-gnu/sysroot/usr"
+      ENV{PATH}:
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/bin"
+        - "/home/yukishige.kawaguchi/.modular/bin"
+        - "/home/yukishige.kawaguchi/.pixi/bin"
+        - "/home/yukishige.kawaguchi/bin/ollama"
+        - "/home/yukishige.kawaguchi/micromamba/condabin"
+        - "/home/yukishige.kawaguchi/.local/bin"
+        - "/home/yukishige.kawaguchi/.elan/bin"
+        - "/home/yukishige.kawaguchi/.local/bin/micromamba"
+        - "/home/yukishige.kawaguchi/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/yukishige.kawaguchi/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/yukishige.kawaguchi/.vscode-server/cli/servers/Stable-585eba7c0c34fd6b30faac7c62a42050bfbc0086/server/bin/remote-cli"
+        - "/home/yukishige.kawaguchi/.elan/bin"
+        - "/home/yukishige.kawaguchi/.linuxbrew/bin"
+        - "/home/yukishige.kawaguchi/.linuxbrew/sbin"
+        - "/home/yukishige.kawaguchi/.elan/bin"
+        - "/home/yukishige.kawaguchi/.linuxbrew/bin"
+        - "/home/yukishige.kawaguchi/.linuxbrew/sbin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/bin/../x86_64-conda-linux-gnu/sysroot/usr"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default"
+      CMAKE_SYSTEM_INCLUDE_PATH:
+        - "/usr/include/X11"
+...
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - ".pixi/envs/default/share/cmake-4.2/Modules/FindCUDAToolkit.cmake:1088 (find_path)"
+      - "CMakeLists.txt:8 (find_package)"
+    mode: "path"
+    variable: "CUDAToolkit_CUBLAS_INCLUDE_DIR"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "cublas_v2.h"
+    candidate_directories:
+      - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/targets/x86_64-linux/include/"
+    found: "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/targets/x86_64-linux/include/"
+    search_context:
+      ENV{CMAKE_PREFIX_PATH}:
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default"
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/x86_64-conda-linux-gnu/sysroot/usr"
+      ENV{PATH}:
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/bin"
+        - "/home/yukishige.kawaguchi/.modular/bin"
+        - "/home/yukishige.kawaguchi/.pixi/bin"
+        - "/home/yukishige.kawaguchi/bin/ollama"
+        - "/home/yukishige.kawaguchi/micromamba/condabin"
+        - "/home/yukishige.kawaguchi/.local/bin"
+        - "/home/yukishige.kawaguchi/.elan/bin"
+        - "/home/yukishige.kawaguchi/.local/bin/micromamba"
+        - "/home/yukishige.kawaguchi/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/yukishige.kawaguchi/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/yukishige.kawaguchi/.vscode-server/cli/servers/Stable-585eba7c0c34fd6b30faac7c62a42050bfbc0086/server/bin/remote-cli"
+        - "/home/yukishige.kawaguchi/.elan/bin"
+        - "/home/yukishige.kawaguchi/.linuxbrew/bin"
+        - "/home/yukishige.kawaguchi/.linuxbrew/sbin"
+        - "/home/yukishige.kawaguchi/.elan/bin"
+        - "/home/yukishige.kawaguchi/.linuxbrew/bin"
+        - "/home/yukishige.kawaguchi/.linuxbrew/sbin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/bin/../x86_64-conda-linux-gnu/sysroot/usr"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default"
+      CMAKE_SYSTEM_INCLUDE_PATH:
+        - "/usr/include/X11"
+...
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - ".pixi/envs/default/share/cmake-4.2/Modules/FindCUDAToolkit.cmake:1088 (find_path)"
+      - "CMakeLists.txt:8 (find_package)"
+    mode: "path"
+    variable: "CUDAToolkit_CUBLAS_INCLUDE_DIR"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "cublas_v2.h"
+    candidate_directories:
+      - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/targets/x86_64-linux/include/"
+    found: "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/targets/x86_64-linux/include/"
+    search_context:
+      ENV{CMAKE_PREFIX_PATH}:
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default"
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/x86_64-conda-linux-gnu/sysroot/usr"
+      ENV{PATH}:
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/bin"
+        - "/home/yukishige.kawaguchi/.modular/bin"
+        - "/home/yukishige.kawaguchi/.pixi/bin"
+        - "/home/yukishige.kawaguchi/bin/ollama"
+        - "/home/yukishige.kawaguchi/micromamba/condabin"
+        - "/home/yukishige.kawaguchi/.local/bin"
+        - "/home/yukishige.kawaguchi/.elan/bin"
+        - "/home/yukishige.kawaguchi/.local/bin/micromamba"
+        - "/home/yukishige.kawaguchi/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/yukishige.kawaguchi/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/yukishige.kawaguchi/.vscode-server/cli/servers/Stable-585eba7c0c34fd6b30faac7c62a42050bfbc0086/server/bin/remote-cli"
+        - "/home/yukishige.kawaguchi/.elan/bin"
+        - "/home/yukishige.kawaguchi/.linuxbrew/bin"
+        - "/home/yukishige.kawaguchi/.linuxbrew/sbin"
+        - "/home/yukishige.kawaguchi/.elan/bin"
+        - "/home/yukishige.kawaguchi/.linuxbrew/bin"
+        - "/home/yukishige.kawaguchi/.linuxbrew/sbin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/bin/../x86_64-conda-linux-gnu/sysroot/usr"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default"
+      CMAKE_SYSTEM_INCLUDE_PATH:
+        - "/usr/include/X11"
+...
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - ".pixi/envs/default/share/cmake-4.2/Modules/FindCUDAToolkit.cmake:1088 (find_path)"
+      - "CMakeLists.txt:8 (find_package)"
+    mode: "path"
+    variable: "CUDAToolkit_CUBLAS_INCLUDE_DIR"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "cublas_v2.h"
+    candidate_directories:
+      - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/targets/x86_64-linux/include/"
+    found: "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/targets/x86_64-linux/include/"
+    search_context:
+      ENV{CMAKE_PREFIX_PATH}:
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default"
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/x86_64-conda-linux-gnu/sysroot/usr"
+      ENV{PATH}:
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/bin"
+        - "/home/yukishige.kawaguchi/.modular/bin"
+        - "/home/yukishige.kawaguchi/.pixi/bin"
+        - "/home/yukishige.kawaguchi/bin/ollama"
+        - "/home/yukishige.kawaguchi/micromamba/condabin"
+        - "/home/yukishige.kawaguchi/.local/bin"
+        - "/home/yukishige.kawaguchi/.elan/bin"
+        - "/home/yukishige.kawaguchi/.local/bin/micromamba"
+        - "/home/yukishige.kawaguchi/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/yukishige.kawaguchi/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/yukishige.kawaguchi/.vscode-server/cli/servers/Stable-585eba7c0c34fd6b30faac7c62a42050bfbc0086/server/bin/remote-cli"
+        - "/home/yukishige.kawaguchi/.elan/bin"
+        - "/home/yukishige.kawaguchi/.linuxbrew/bin"
+        - "/home/yukishige.kawaguchi/.linuxbrew/sbin"
+        - "/home/yukishige.kawaguchi/.elan/bin"
+        - "/home/yukishige.kawaguchi/.linuxbrew/bin"
+        - "/home/yukishige.kawaguchi/.linuxbrew/sbin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/bin/../x86_64-conda-linux-gnu/sysroot/usr"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default"
+      CMAKE_SYSTEM_INCLUDE_PATH:
+        - "/usr/include/X11"
+...
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - ".pixi/envs/default/share/cmake-4.2/Modules/FindCUDAToolkit.cmake:1088 (find_path)"
+      - "CMakeLists.txt:8 (find_package)"
+    mode: "path"
+    variable: "CUDAToolkit_CUBLAS_INCLUDE_DIR"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "cublas_v2.h"
+    candidate_directories:
+      - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/targets/x86_64-linux/include/"
+    found: "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/targets/x86_64-linux/include/"
+    search_context:
+      ENV{CMAKE_PREFIX_PATH}:
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default"
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/x86_64-conda-linux-gnu/sysroot/usr"
+      ENV{PATH}:
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/bin"
+        - "/home/yukishige.kawaguchi/.modular/bin"
+        - "/home/yukishige.kawaguchi/.pixi/bin"
+        - "/home/yukishige.kawaguchi/bin/ollama"
+        - "/home/yukishige.kawaguchi/micromamba/condabin"
+        - "/home/yukishige.kawaguchi/.local/bin"
+        - "/home/yukishige.kawaguchi/.elan/bin"
+        - "/home/yukishige.kawaguchi/.local/bin/micromamba"
+        - "/home/yukishige.kawaguchi/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/yukishige.kawaguchi/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/yukishige.kawaguchi/.vscode-server/cli/servers/Stable-585eba7c0c34fd6b30faac7c62a42050bfbc0086/server/bin/remote-cli"
+        - "/home/yukishige.kawaguchi/.elan/bin"
+        - "/home/yukishige.kawaguchi/.linuxbrew/bin"
+        - "/home/yukishige.kawaguchi/.linuxbrew/sbin"
+        - "/home/yukishige.kawaguchi/.elan/bin"
+        - "/home/yukishige.kawaguchi/.linuxbrew/bin"
+        - "/home/yukishige.kawaguchi/.linuxbrew/sbin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/bin/../x86_64-conda-linux-gnu/sysroot/usr"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default"
+      CMAKE_SYSTEM_INCLUDE_PATH:
+        - "/usr/include/X11"
+...
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - ".pixi/envs/default/share/cmake-4.2/Modules/FindCUDAToolkit.cmake:1088 (find_path)"
+      - "CMakeLists.txt:8 (find_package)"
+    mode: "path"
+    variable: "CUDAToolkit_CUBLAS_INCLUDE_DIR"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "cublas_v2.h"
+    candidate_directories:
+      - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/targets/x86_64-linux/include/"
+    found: "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/targets/x86_64-linux/include/"
+    search_context:
+      ENV{CMAKE_PREFIX_PATH}:
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default"
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/x86_64-conda-linux-gnu/sysroot/usr"
+      ENV{PATH}:
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/bin"
+        - "/home/yukishige.kawaguchi/.modular/bin"
+        - "/home/yukishige.kawaguchi/.pixi/bin"
+        - "/home/yukishige.kawaguchi/bin/ollama"
+        - "/home/yukishige.kawaguchi/micromamba/condabin"
+        - "/home/yukishige.kawaguchi/.local/bin"
+        - "/home/yukishige.kawaguchi/.elan/bin"
+        - "/home/yukishige.kawaguchi/.local/bin/micromamba"
+        - "/home/yukishige.kawaguchi/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/yukishige.kawaguchi/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/yukishige.kawaguchi/.vscode-server/cli/servers/Stable-585eba7c0c34fd6b30faac7c62a42050bfbc0086/server/bin/remote-cli"
+        - "/home/yukishige.kawaguchi/.elan/bin"
+        - "/home/yukishige.kawaguchi/.linuxbrew/bin"
+        - "/home/yukishige.kawaguchi/.linuxbrew/sbin"
+        - "/home/yukishige.kawaguchi/.elan/bin"
+        - "/home/yukishige.kawaguchi/.linuxbrew/bin"
+        - "/home/yukishige.kawaguchi/.linuxbrew/sbin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/bin/../x86_64-conda-linux-gnu/sysroot/usr"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default"
+      CMAKE_SYSTEM_INCLUDE_PATH:
+        - "/usr/include/X11"
+...
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - ".pixi/envs/default/share/cmake-4.2/Modules/FindCUDAToolkit.cmake:1088 (find_path)"
+      - "CMakeLists.txt:8 (find_package)"
+    mode: "path"
+    variable: "CUDAToolkit_CUBLAS_INCLUDE_DIR"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "cublas_v2.h"
+    candidate_directories:
+      - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/targets/x86_64-linux/include/"
+    found: "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/targets/x86_64-linux/include/"
+    search_context:
+      ENV{CMAKE_PREFIX_PATH}:
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default"
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/x86_64-conda-linux-gnu/sysroot/usr"
+      ENV{PATH}:
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/bin"
+        - "/home/yukishige.kawaguchi/.modular/bin"
+        - "/home/yukishige.kawaguchi/.pixi/bin"
+        - "/home/yukishige.kawaguchi/bin/ollama"
+        - "/home/yukishige.kawaguchi/micromamba/condabin"
+        - "/home/yukishige.kawaguchi/.local/bin"
+        - "/home/yukishige.kawaguchi/.elan/bin"
+        - "/home/yukishige.kawaguchi/.local/bin/micromamba"
+        - "/home/yukishige.kawaguchi/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/yukishige.kawaguchi/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/yukishige.kawaguchi/.vscode-server/cli/servers/Stable-585eba7c0c34fd6b30faac7c62a42050bfbc0086/server/bin/remote-cli"
+        - "/home/yukishige.kawaguchi/.elan/bin"
+        - "/home/yukishige.kawaguchi/.linuxbrew/bin"
+        - "/home/yukishige.kawaguchi/.linuxbrew/sbin"
+        - "/home/yukishige.kawaguchi/.elan/bin"
+        - "/home/yukishige.kawaguchi/.linuxbrew/bin"
+        - "/home/yukishige.kawaguchi/.linuxbrew/sbin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/bin/../x86_64-conda-linux-gnu/sysroot/usr"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default"
+      CMAKE_SYSTEM_INCLUDE_PATH:
+        - "/usr/include/X11"
+...
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - ".pixi/envs/default/share/cmake-4.2/Modules/FindCUDAToolkit.cmake:1088 (find_path)"
+      - "CMakeLists.txt:8 (find_package)"
+    mode: "path"
+    variable: "CUDAToolkit_CUBLAS_INCLUDE_DIR"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "cublas_v2.h"
+    candidate_directories:
+      - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/targets/x86_64-linux/include/"
+    found: "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/targets/x86_64-linux/include/"
+    search_context:
+      ENV{CMAKE_PREFIX_PATH}:
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default"
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/x86_64-conda-linux-gnu/sysroot/usr"
+      ENV{PATH}:
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/bin"
+        - "/home/yukishige.kawaguchi/.modular/bin"
+        - "/home/yukishige.kawaguchi/.pixi/bin"
+        - "/home/yukishige.kawaguchi/bin/ollama"
+        - "/home/yukishige.kawaguchi/micromamba/condabin"
+        - "/home/yukishige.kawaguchi/.local/bin"
+        - "/home/yukishige.kawaguchi/.elan/bin"
+        - "/home/yukishige.kawaguchi/.local/bin/micromamba"
+        - "/home/yukishige.kawaguchi/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/yukishige.kawaguchi/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/yukishige.kawaguchi/.vscode-server/cli/servers/Stable-585eba7c0c34fd6b30faac7c62a42050bfbc0086/server/bin/remote-cli"
+        - "/home/yukishige.kawaguchi/.elan/bin"
+        - "/home/yukishige.kawaguchi/.linuxbrew/bin"
+        - "/home/yukishige.kawaguchi/.linuxbrew/sbin"
+        - "/home/yukishige.kawaguchi/.elan/bin"
+        - "/home/yukishige.kawaguchi/.linuxbrew/bin"
+        - "/home/yukishige.kawaguchi/.linuxbrew/sbin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/bin/../x86_64-conda-linux-gnu/sysroot/usr"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default"
+      CMAKE_SYSTEM_INCLUDE_PATH:
+        - "/usr/include/X11"
+...
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - ".pixi/envs/default/share/cmake-4.2/Modules/FindCUDAToolkit.cmake:1088 (find_path)"
+      - "CMakeLists.txt:8 (find_package)"
+    mode: "path"
+    variable: "CUDAToolkit_CUBLAS_INCLUDE_DIR"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "cublas_v2.h"
+    candidate_directories:
+      - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/targets/x86_64-linux/include/"
+    found: "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/targets/x86_64-linux/include/"
+    search_context:
+      ENV{CMAKE_PREFIX_PATH}:
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default"
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/x86_64-conda-linux-gnu/sysroot/usr"
+      ENV{PATH}:
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/bin"
+        - "/home/yukishige.kawaguchi/.modular/bin"
+        - "/home/yukishige.kawaguchi/.pixi/bin"
+        - "/home/yukishige.kawaguchi/bin/ollama"
+        - "/home/yukishige.kawaguchi/micromamba/condabin"
+        - "/home/yukishige.kawaguchi/.local/bin"
+        - "/home/yukishige.kawaguchi/.elan/bin"
+        - "/home/yukishige.kawaguchi/.local/bin/micromamba"
+        - "/home/yukishige.kawaguchi/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/yukishige.kawaguchi/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/yukishige.kawaguchi/.vscode-server/cli/servers/Stable-585eba7c0c34fd6b30faac7c62a42050bfbc0086/server/bin/remote-cli"
+        - "/home/yukishige.kawaguchi/.elan/bin"
+        - "/home/yukishige.kawaguchi/.linuxbrew/bin"
+        - "/home/yukishige.kawaguchi/.linuxbrew/sbin"
+        - "/home/yukishige.kawaguchi/.elan/bin"
+        - "/home/yukishige.kawaguchi/.linuxbrew/bin"
+        - "/home/yukishige.kawaguchi/.linuxbrew/sbin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default/bin/../x86_64-conda-linux-gnu/sysroot/usr"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/home/yukishige.kawaguchi/workspace/YuXiGe/Aquatones-ALETHEIA/.pixi/envs/default"
+      CMAKE_SYSTEM_INCLUDE_PATH:
+        - "/usr/include/X11"
+...

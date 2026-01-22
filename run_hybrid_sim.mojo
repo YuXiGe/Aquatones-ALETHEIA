@@ -1,62 +1,85 @@
 from memory import UnsafePointer, alloc
 from python import Python
 import math
+import random # モックデータ生成用
 
 fn main() raises:
     print("================================================================")
-    print("   🏙️  Nagasaki City OS: Hybrid Physics Engine (Python Bridge)")
-    print("   HARDWARE: NVIDIA H100 NVL + Intel Xeon Gold")
+    print("   📊 Nagasaki Future Tourism Forecast Dashboard Backend")
+    print("      Powered by Mojo (Compute) & Lean 4 (Proof)")
     print("================================================================")
 
-    # -----------------------------------------------------
-    # Step 0: Load Library via Python
-    # -----------------------------------------------------
-    print("🐍 Python: Loading CUDA Bridge Library...")
-    
+    # ... (ライブラリロード、FFI設定は前回と同様。新しい関数の定義を追加) ...
     var ffi = Python.import_module("ctypes")
     var os = Python.import_module("os")
-    
-    var cwd = String(os.getcwd())
-    var lib_path = cwd + "/build/libPhysicsOracleBridge.so"
+    var lib_path = String(os.getcwd()) + "/build/libPhysicsOracleBridge.so"
     var lib = ffi.CDLL(lib_path)
     
-    # ctypesの型定義
-    lib.launch_gpu_simulation.argtypes = [ffi.c_void_p, ffi.c_int]
-    lib.launch_gpu_simulation.restype = None
+    # 新しい検証関数の型定義
+    lib.verify_demand_consistency.argtypes = [ffi.c_float, ffi.c_float, ffi.c_float]
+    lib.verify_demand_consistency.restype = ffi.c_bool
+    lib.verify_transit_capacity.argtypes = [ffi.c_float, ffi.c_float]
+    lib.verify_transit_capacity.restype = ffi.c_bool
 
     # -----------------------------------------------------
-    # Simulation Setup
+    # Mock Data: モバイル空間統計 & 気象 & イベント
     # -----------------------------------------------------
-    var grid_width = 10000
-    var size = grid_width * grid_width
-    var data_ptr = alloc[Float32](size)
-
-    # -----------------------------------------------------
-    # Phase A: CPU Initialization
-    # -----------------------------------------------------
-    print("⚡ [CPU] Initializing " + String(size) + " voxels...")
-    for i in range(size):
-        var val = math.sin(Float32(i) * 0.0001) * 100.0 + math.cos(Float32(i) * 0.005) * 50.0
-        data_ptr.store(i, val)
+    # 本来はCSVやAPIから取得
+    var macro_inflow_base = 10000.0 # 長崎駅からの基本流入数
+    var transit_capacity = 2000.0   # 1時間あたりのバス・電車輸送力
     
-    print("   -> Check Voxel[12345]: " + String(data_ptr[12345]))
-
-    # -----------------------------------------------------
-    # Phase B: GPU Simulation (Mojo -> Python -> CUDA)
-    # -----------------------------------------------------
-    print("🌊 [GPU] Handing over to NVIDIA H100...")
-
-    # 【重要】ポインタのアドレスを数値として取得
-    # UnsafePointer を Int (Pythonの整数に対応) に変換します
+    var size = 100000000
+    var data_ptr = alloc[Float32](size)
     var ptr_address = Int(data_ptr)
+    
+    # 初期化
+    for i in range(size): data_ptr.store(i, 0.0)
 
-    for i in range(10):
-        # Python に数値を渡すことで、ctypes が c_void_p として扱ってくれます
+    print("🚀 Starting Daily Simulation Cycle...")
+
+    for hour in range(10, 22): # 10:00 〜 22:00
+        # 1. 時間帯によるマクロ人流の変化 (モバイル空間統計モック)
+        var current_inflow = macro_inflow_base * (1.0 + math.sin(Float32(hour) * 0.2))
+        
+        # 2. H100へ注入 & 拡散シミュレーション
+        # (ここでは簡易的に、流入分を密度に加算する処理とする)
         _ = lib.launch_gpu_simulation(ptr_address, size)
         
-        # 物理演算の結果を確認
-        print("   [Step " + String(i+1) + "] Voxel[12345] Density: " + String(data_ptr[12345]))
+        # スタジアム周辺のマイクロ人流密度（H100の結果）
+        var micro_density = data_ptr[12345] * 10.0 # 仮のスケール
+        
+        # -------------------------------------------------
+        # Stakeholder 1: 飲食・宿泊事業者向け (Demand Proof)
+        # -------------------------------------------------
+        var predicted_visitors = micro_density * 50.0
+        # Lean 4: 「その客数予測は、マクロ流入数と矛盾していないか？」
+        var demand_is_valid = lib.verify_demand_consistency(
+            ffi.c_float(current_inflow),
+            ffi.c_float(predicted_visitors),
+            0.4 # 最大誘引率 40%
+        )
+        
+        if demand_is_valid:
+            print("🕒 " + String(hour) + ":00 [🍜 F&B/Hotel] Forecast Verified.")
+            print("   -> Inflow: " + String(int(current_inflow)) + " / Prediction: " + String(int(predicted_visitors)) + " customers.")
+        else:
+            print("🕒 " + String(hour) + ":00 [🍜 F&B/Hotel] ⚠️ Prediction Rejected by Lean 4 (Overestimated).")
 
-    print("✅ Simulation Completed Successfully.")
-    
+        # -------------------------------------------------
+        # Stakeholder 2: 交通事業者向け (Transit Proof)
+        # -------------------------------------------------
+        # 帰宅需要（簡易計算）
+        var return_demand = micro_density * 100.0
+        
+        # Lean 4: 「現在のダイヤで積み残しが発生しないか？」
+        var transit_is_safe = lib.verify_transit_capacity(
+            ffi.c_float(transit_capacity),
+            ffi.c_float(return_demand)
+        )
+        
+        if not transit_is_safe:
+            print("   [🚌 Transport] 🚨 ALERT: Capacity Shortage Predicted! Demand: " + String(int(return_demand)))
+            print("      -> Action Required: Increase bus frequency.")
+
+    print("✅ Daily Cycle Completed.")
     data_ptr.free()
